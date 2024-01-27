@@ -2,9 +2,11 @@ import express, { NextFunction, Request, Response } from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import cookieSession from 'cookie-session';
+import dotenv from 'dotenv';
 import { apiConfig } from './config/apiConfig';
 import { connDB } from './db/dbConn';
 import { createLogger } from './logging/logger';
+dotenv.config();
 const logger = createLogger('index');
 
 logger.info('Starting server...');
